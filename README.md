@@ -31,6 +31,34 @@ chmod +x setup.sh && ./setup.sh
 ```
 *Note: This script automates virtual environment creation, pip/npm dependency installation, and concurrent server execution.*
 
+### First Steps After Launching
+Once the application opens in your browser:
+1. Navigate to the **Sign Up** screen.
+2. Create a new account with a username and a password.
+3. Log in to begin adding child profiles and tracking care logs. 
+
+*Note: The database starts empty to allow for a clean, personalized testing experience.*
+
+## Manual Setup (If Script Fails)
+If the automated script does not work on your system, you can launch the components manually:
+
+### 1. Server Setup
+```
+cd server
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python seed.py  # Initializes the database tables
+python app.py   # Starts backend on http://localhost:5555
+```
+
+### 2. Client Setup Open a second terminal window:
+```
+cd client
+npm install
+npm run dev     # Starts frontend on http://localhost:5173
+```
+
 ## API Endpoints Reference
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
