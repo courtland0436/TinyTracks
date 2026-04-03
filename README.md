@@ -26,9 +26,9 @@ TinyTracks is a full-stack application designed for parents and caregivers to mo
 
 ## Quick Start (One-Command Setup)
 To install all dependencies, initialize the database, and launch the application in your browser automatically, run the following command from the project root:
-
+```
 chmod +x setup.sh && ./setup.sh
-
+```
 *Note: This script automates virtual environment creation, pip/npm dependency installation, and concurrent server execution.*
 
 ## API Endpoints Reference
