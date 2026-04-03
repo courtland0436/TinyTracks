@@ -1,0 +1,22 @@
+# Python / Flask
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+.flaskenv
+
+# Database & Instance
+server/instance/
+*.db
+
+# React / Node
+node_modules/
+dist/
+.vite/
+.output/
+
+# OS/Other
+.DS_Store
+.vscode/
+.idea/
