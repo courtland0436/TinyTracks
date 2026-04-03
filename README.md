@@ -56,8 +56,9 @@ python app.py   # Starts backend on http://localhost:5555
 ```
 cd client
 npm install
-npm run dev     # Starts frontend on http://localhost:5173
+npm run dev
 ```
+Start frontend in browser at http://localhost:5173
 
 ## API Endpoints Reference
 | Method | Endpoint | Description |
