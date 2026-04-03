@@ -18,9 +18,9 @@ flask db upgrade
 # python seed.py 
 cd ..
 
-# 2. Frontend Setup
+# 2. Client Setup
 echo "Installing React dependencies..."
-cd frontend
+cd client
 npm install
 cd ..
 
@@ -34,10 +34,10 @@ python app.py &
 BACKEND_PID=$!
 cd ..
 
-# Start Frontend
-cd frontend
+# Start Client
+cd client
 npm run dev &
-FRONTEND_PID=$!
+CLIENT_PID=$!
 
 # Wait for servers and open browser
 sleep 5
@@ -50,5 +50,5 @@ elif command -v xdg-open > /dev/null; then
 fi
 
 # Keep the script running to maintain the background processes
-trap "kill $BACKEND_PID $FRONTEND_PID" EXIT
+trap "kill $BACKEND_PID $CLIENT_PID" EXIT
 wait
